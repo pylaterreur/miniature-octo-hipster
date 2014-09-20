@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 2.8)
+
+PROJECT(miniature-octo-hipster)
+
+SET(${PROJECT_NAME}_HEADER_DIRECTORY include/)
+INCLUDE_DIRECTORIES(
+  ${${PROJECT_NAME}_HEADER_DIRECTORY}
+  )
+
+SET(CMAKE_CXX_FLAGS "-W -Wextra -Wall -std=c++11")
+
+SET(${PROJECT_NAME}_SRC_DIRECTORY src/)
+SET(
+  ${PROJECT_NAME}_SRCS
+  ${${PROJECT_NAME}_SRC_DIRECTORY}/main.cpp
+  ${${PROJECT_NAME}_SRC_DIRECTORY}/other.cpp
+  )
+
+
+ADD_EXECUTABLE(
+  ${PROJECT_NAME}
+  ${${PROJECT_NAME}_SRCS}
+  )
